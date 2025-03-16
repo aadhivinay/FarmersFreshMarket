@@ -8,7 +8,7 @@ body {
 nav {
     background-color: #015551;
     color: white;
-    padding: 0px 2px;
+    padding: 10px 20px; /* Adjusted padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,6 +16,10 @@ nav {
     top: 0;
     width: 100%;
     z-index: 100;
+}
+
+nav h1 { /* Added to remove default margin */
+    margin: 0;
 }
 
 .nav-right {
@@ -26,6 +30,8 @@ nav {
 nav menu {
     list-style: none;
     display: flex;
+    margin: 0; /* Added to remove default margin */
+    padding: 0; /* Added to remove default padding */
 }
 
 nav menu li {
@@ -36,6 +42,11 @@ nav menu li {
 
 nav menu li:hover {
     color: #ddd;
+}
+
+nav menu li a { /* Added to style anchor tags */
+    color: white;
+    text-decoration: none; /* Removed underline */
 }
 
 .product-container {
@@ -116,7 +127,7 @@ nav menu li:hover {
 }
 
 .cart-page div {
-    background-color: white;
+    background-color:white;
     padding: 20px;
     border-radius: 5px;
 }
@@ -170,7 +181,7 @@ nav menu li:hover {
     }
 }
 
-.add-to-cart{
+.add-to-cart {
     margin-top: 10px;
 }
 
@@ -179,3 +190,302 @@ nav menu li:hover {
     grid-template-columns: repeat(5, 1fr); /* Fixed 5 columns */
     gap: 20px;
 }
+
+/* Auth container styles */
+body {
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-container input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #015551;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.auth-container button:hover {
+    background-color: #01403d;
+}
+
+.auth-container a {
+    color: #015551;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+#google-signin-button {
+    margin: 10px auto;
+    width: fit-content;
+}
+
+@media (max-width: 400px) {
+    .auth-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+#cart-section {
+    padding: 20px;
+}
+
+.cart-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.checkout-button, .back-to-products {
+    background-color: #015551;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* ... (your existing CSS) ... */
+
+.cart-items li {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-items li:last-child {
+    border-bottom: none;
+}
+
+.cart-items li img {
+    border-radius: 5px; /* Optional: Add rounded corners to images */
+}
+
+/* ... (rest of your CSS) ... */
+#payment-section {
+    padding: 60px;
+    text-align: center;
+}
+
+.payment-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    background-color: #015551;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    width: 250px;
+}
+
+#payment-status {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.back-to-products-payment {
+    background-color: #015551;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.upi-option img {
+    width: 80px; /* Adjust as needed */
+    height: auto;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.delivery-address {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.delivery-address input {
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/* ... (your existing CSS) ... */
+/* ... (your existing CSS) ... */
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 15px;
+    justify-content: center;
+}
+
+.payment-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: left;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #333; /* Improved text color */
+}
+
+.payment-option img {
+    width: 30px; /* Smaller image size */
+    height: auto;
+    margin-right: 10px;
+}
+
+.payment-option:hover {
+    background-color: #e0e0e0;
+}
+
+/* ... (rest of your CSS) ... */
+#payment-section {
+    height: 100vh;
+    /* overflow: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 53px;
+}
+
+.payment-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 98%; /* Maximize width */
+    max-width: 1200px; /* Increase max width */
+    margin: 0 auto;
+    padding: 15px; /* Reduced padding */
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increase min width */
+    gap: 8px; /* Reduced gap */
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.payment-card {
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    padding: 8px; /* Reduced padding */
+    text-align: left;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 6px; /* Reduced padding */
+    border: none;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #333;
+    font-size: 12px; /* Reduced font size */
+}
+
+.payment-option img {
+    width: 25px; /* Reduced image size */
+    height: 25px;
+    margin-right: 6px;
+}
+
+#payment-status {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.back-to-products-payment {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+

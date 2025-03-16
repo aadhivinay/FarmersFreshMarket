@@ -12,11 +12,9 @@
         <div class="nav-right">
             <menu>
                 <li><a href="#" id="home-link">Home</a></li>
-                <li><a href="#" id="products-link">Products</a></li>
                 <li><a href="#" id="about-us-link">About Us</a></li>
                 <li><a href="#" id="contact-link">Contact</a></li>
                 <li><a href="login.html" id="login-link">Login</a></li>
-                <li><a href="signup.html" id="signup-link">Signup</a></li>
             </menu>
             <div class="cart-icon">
                 🛒 <span class="cart-count"></span>
@@ -30,13 +28,6 @@
                 <div class="search-bar">
                     <input type="text" id="search-input" placeholder="Search products...">
                 </div>
-                <div class="product-grid">
-                </div>
-            </div>
-        </div>
-
-        <div id="products-section" class="section" style="display: none;">
-            <div class="product-container">
                 <div class="product-grid">
                 </div>
             </div>
@@ -60,19 +51,83 @@
             </div>
         </div>
 
-        <div class="cart-page" style="display:none;">
-            <h2>Shopping Cart</h2>
-            <ul class="cart-items"></ul>
-            <p>Total: $<span class="cart-total">0</span></p>
-            <button class="checkout-button">Checkout</button>
-            <button class="back-to-products">Back to Products</button>
+        <div id="cart-section" class="section" style="display: none;">
+            <div class="cart-content">
+                <h2>Shopping Cart</h2>
+                <ul class="cart-items"></ul>
+                <p>Total: ₹<span class="cart-total">0</span></p>
+                <div class="delivery-address">
+                    <h3>Delivery Address</h3>
+                    <input type="text" id="delivery-name" placeholder="Name">
+                    <input type="text" id="delivery-address-line1" placeholder="Address Line 1">
+                    <input type="text" id="delivery-address-line2" placeholder="Address Line 2 (Optional)">
+                    <input type="text" id="delivery-city" placeholder="City">
+                    <input type="text" id="delivery-state" placeholder="State">
+                    <input type="text" id="delivery-pincode" placeholder="Pincode">
+                    <input type="text" id="delivery-phone" placeholder="Phone Number">
+                </div>
+                <button class="checkout-button">Checkout</button>
+                <button class="back-to-products">Back to Products</button>
+            </div>
         </div>
-        <div class="payment-container" style="display:none;">
-            <h2>Payment</h2>
-            <p>Payment successful!</p>
-            <button class="back-to-products-payment">Back to Products</button>
+
+        <div id="payment-section" class="section" style="display: none;">
+            <div class="payment-content">
+                <h2>Payment Options</h2>
+                <div class="payment-methods">
+                    <div class="payment-card">
+                        <button class="payment-option">
+                            <img src="gpay.jfif" alt="Google Pay">
+                            <span>Google Pay</span>
+                        </button>
+                    </div>
+                    <div class="payment-card">
+                        <button class="payment-option">
+                            <img src="phonepe.jfif" alt="PhonePe">
+                            <span>PhonePe</span>
+                        </button>
+                    </div>
+                    <div class="payment-card">
+                        <button class="payment-option">
+                            <img src="paytm.jfif" alt="Paytm">
+                            <span>Paytm</span>
+                        </button>
+                    </div>
+                    <div class="payment-card">
+                        <button class="payment-option">Credit/Debit Card</button>
+                    </div>
+                    <div class="payment-card">
+                        <button class="payment-option">Net Banking</button>
+                    </div>
+                    <div class="payment-card">
+                        <button class="payment-option">Cash on Delivery (COD)</button>
+                    </div>
+                </div>
+                <p id="payment-status"></p>
+                <button class="back-to-products-payment">Back to Products</button>
+            </div>
         </div>
     </main>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
+    
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCqICHuQy3ChQhfC4Ws8ct6dbmoQC2zLoI",
+            authDomain: "farmerfreshmarket-d280e.firebaseapp.com",
+            projectId: "farmerfreshmarket-d280e",
+            storageBucket: "farmerfreshmarket-d280e.firebasestorage.app",
+            messagingSenderId: "332591147213",
+            appId: "1:332591147213:web:722ba3a4415ece0ecf6184"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+    </script>
 
     <script src="script.js"></script>
 </body>
