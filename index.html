@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer's Fresh Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>Farmer's Fresh Market</h1>
+        <div class="nav-right">
+            <menu>
+                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="#" id="products-link">Products</a></li>
+                <li><a href="#" id="about-us-link">About Us</a></li>
+                <li><a href="#" id="contact-link">Contact</a></li>
+                <li><a href="login.html" id="login-link">Login</a></li>
+                <li><a href="signup.html" id="signup-link">Signup</a></li>
+            </menu>
+            <div class="cart-icon">
+                🛒 <span class="cart-count"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="home-section" class="section">
+            <div class="product-container">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                </div>
+                <div class="product-grid">
+                </div>
+            </div>
+        </div>
+
+        <div id="products-section" class="section" style="display: none;">
+            <div class="product-container">
+                <div class="product-grid">
+                </div>
+            </div>
+        </div>
+
+        <div id="about-us-section" class="section" style="display: none;">
+            <div class="about-us-content">
+                <h2>About Farmer's Fresh Market</h2>
+                <p>
+                    Farmer's Fresh Market is dedicated to providing the freshest, highest quality produce directly from local farms to your table. We believe in supporting sustainable agriculture and connecting communities with healthy, delicious food. Our mission is to make fresh, nutritious food accessible to everyone while fostering a strong connection between consumers and the people who grow their food.
+                </p>
+            </div>
+        </div>
+
+        <div id="contact-section" class="section" style="display: none;">
+            <div class="contact-content">
+                <h2>Contact Us</h2>
+                <p>
+                    You can reach us by email at <a href="mailto:farmersfreshmarket@example.com">farmersfreshmarket@example.com</a>.
+                </p>
+            </div>
+        </div>
+
+        <div class="cart-page" style="display:none;">
+            <h2>Shopping Cart</h2>
+            <ul class="cart-items"></ul>
+            <p>Total: $<span class="cart-total">0</span></p>
+            <button class="checkout-button">Checkout</button>
+            <button class="back-to-products">Back to Products</button>
+        </div>
+        <div class="payment-container" style="display:none;">
+            <h2>Payment</h2>
+            <p>Payment successful!</p>
+            <button class="back-to-products-payment">Back to Products</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
